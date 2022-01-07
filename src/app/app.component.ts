@@ -6,13 +6,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Search Chef', url: '/search-chef', icon: 'mail' },
+    { title: 'Setting', url: '/setting', icon: 'mail' },
+    { title: 'Payment History', url: '/payment', icon: 'mail' },
+    { title: 'My Orders', url: '/my-orders', icon: 'mail' },
+    { title: 'Profile Page', url: '/profile-page', icon: 'mail' },
+    { title: 'Messages', url: '/messages', icon: 'mail' },
+    { title: 'Filters', url: '/filters', icon: 'mail' },
+    { title: 'Book A Chef', url: '/book-achef', icon: 'mail' },
+    { title: 'Change Address', url: '/change-address', icon: 'mail' },
+    { title: 'My Favourite', url: '/my-favourite', icon: 'mail' },
+    { title: 'Your Order', url: '/your-order', icon: 'mail' },
+    { title: 'FAQs & Help', url: '/faq', icon: 'mail' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = [];
   constructor() {}
 }

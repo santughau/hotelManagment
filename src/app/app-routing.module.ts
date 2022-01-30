@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'your-order',
+    redirectTo: 'setting',
     pathMatch: 'full'
   },
   {
@@ -70,6 +70,22 @@ const routes: Routes = [
   {
     path: 'your-order',
     loadChildren: () => import('./pages/your-order/your-order.module').then( m => m.YourOrderPageModule)
+  },
+  {
+    path: 'chef-details',
+    loadChildren: () => import('./pages/chef-details/chef-details.module').then( m => m.ChefDetailsPageModule)
+  },
+  {
+    path: 'preferences',
+    loadChildren: () => import('./pages/preferences/preferences.module').then( m => m.PreferencesPageModule)
+  },
+  {
+    path: 'swipper',
+    loadChildren: () => import('./pages/swipper/swipper.module').then( m => m.SwipperPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   }
 ];
 

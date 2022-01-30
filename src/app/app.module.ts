@@ -12,11 +12,15 @@ import { CommonModule } from '@angular/common';
 import { NotificationsComponent } from './pages/components/notifications/notifications.component';
 import { AddressComponent } from './pages/components/address/address.component';
 import { CoupanComponent } from './pages/components/coupan/coupan.component';
+import { AddItemsComponent } from './pages/components/add-items/add-items.component';
+import { SplashScreen } from '@awesome-cordova-plugins/splash-screen/ngx';
 
+
+import { StatusBar } from '@awesome-cordova-plugins/status-bar/ngx';
 @NgModule({
-    declarations: [AppComponent, NotificationsComponent,AddressComponent,CoupanComponent],
+    declarations: [AppComponent,AddItemsComponent, NotificationsComponent,AddressComponent,CoupanComponent],
     imports: [BrowserModule, CommonModule, FormsModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
-    providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    providers: [SplashScreen,StatusBar,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

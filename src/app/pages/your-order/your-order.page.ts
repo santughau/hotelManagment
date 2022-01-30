@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoadingController, ModalController } from '@ionic/angular';
 import { TouchSequence } from 'selenium-webdriver';
 import { AppServiceService } from 'src/app/services/app-service.service';
+import { AddItemsComponent } from '../components/add-items/add-items.component';
 import { CoupanComponent } from '../components/coupan/coupan.component';
 
 @Component({
@@ -102,5 +103,34 @@ export class YourOrderPage implements OnInit {
       console.log(this.returnDataFromModal);
     })
     return await modal.present();
+  }
+
+  async moreItems() {
+    console.log("more items Added");
+    const modal = await this.modalCtrl.create({
+      component: AddItemsComponent,
+      showBackdrop: true,
+      backdropDismiss: true,
+      animated: true,
+      swipeToClose: true,
+      mode: 'ios',
+      keyboardClose: true,
+      componentProps: {
+        "name": "Yamini",
+        "city":"Nanded"
+      },
+      cssClass: "bookingmodal"
+    })
+
+    modal.onDidDismiss().then((data:any) => {
+      this.returnDataFromModal = data;
+      console.log(this.returnDataFromModal);
+    })
+    return await modal.present();
+  }
+
+  orderDetails() {
+    console.log("click");
+    
   }
 }

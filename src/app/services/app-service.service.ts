@@ -5,8 +5,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AppServiceService {
-
+ 
   constructor(private http: HttpClient) { }
+
+  setData() {
+   
+    localStorage.setItem('onboarding','false' )
+  }
+
+  getData() {
+    return localStorage.getItem('onboarding')
+  }
 
   getAllDishes(): Observable<any> {
     return this.http.get('assets/json/dish.json');

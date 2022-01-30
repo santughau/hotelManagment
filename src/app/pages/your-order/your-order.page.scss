@@ -136,6 +136,10 @@ ion-content{
         }
     }
 
+    #moreItmes{
+        text-align: center;
+        color:red;
+    }
     .order_summary{
         width:100%;
         background-color: #fff;
@@ -150,6 +154,7 @@ ion-content{
             color:gray;
             margin-left:20px;
             margin-right:20px;
+            border-bottom: 1px solid gray;
             span{
                 float: right;
                 margin-right:10px;
@@ -165,5 +170,9 @@ ion-content{
             }
         }
         
+    }
+
+    ion-footer{
+        --background: gray;
     }
 }

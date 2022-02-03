@@ -42,6 +42,18 @@
     --height:85%;
 }
 
+.emailReset::part(content) {
+    width:90%;
+    --border-radius:20px;
+    --height:45%;
+}
+
+.phoneVerify::part(content) {
+    width:90%;
+    --border-radius:20px;
+    --height:45%;
+}
+
 .addAddress::part(content) {
     width:70%;
     --border-radius:10px;

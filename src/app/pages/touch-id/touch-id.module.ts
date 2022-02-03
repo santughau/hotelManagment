@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPageRoutingModule } from './login-routing.module';
+import { TouchIdPageRoutingModule } from './touch-id-routing.module';
 
-import { LoginPage } from './login.page';
-
+import { TouchIdPage } from './touch-id.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule
+    TouchIdPageRoutingModule
   ],
-  declarations: [LoginPage]
+  declarations: [TouchIdPage]
 })
-export class LoginPageModule {}
+export class TouchIdPageModule {}

@@ -28,37 +28,43 @@ ion-content{
             height:auto;
             background: #fff;
             padding:20px;
+            h3{
+                color:red;
+                text-align: center;
+                border-bottom:1px solid #ccc;
+                padding-bottom:10px;
+            }
             p{
                 color:gray;
                 text-align: center;
             }
-            ion-item{
-                ion-icon{
-                    color:#ff7300;
-                }
-            }
-            #forgetPassword{
-                font-size: 14px;
-                color: #ff7300;
-                text-align: end;
-            }
-            .btn{
-                display: flex;
-                justify-content: center;
-                ion-button{
-                    --background:#ff7300;
-                }
-            }
+            
             #media{
-                color:black;
+                color:gray;
+                border-bottom:1px solid #ccc;
+                padding-bottom:10px;
+            }
+            .fingerPrints{
+                width:100%;               
+                height:auto;               
+                .fingerIcon{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    ion-icon{
+                        font-size: 120px;
+                        border-radius: 50%;
+                        border:15px solid transparent;
+                        outline: 1px solid red;
+                    }
+                }
+                
             }
             .socialMedia{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-bottom:1px solid #ccc;
-                border-top:1px solid #ccc;
-                padding-top:10px;
                 padding-bottom:10px;
                 ion-icon{
                     padding-right:15px;

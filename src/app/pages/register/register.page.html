@@ -8,7 +8,7 @@
   <div class="middle">
     <div class="box">
       <form #loginForm="ngForm">
-        <p>Please Login to Your Account</p>
+        <p>Please Register to Your Account</p>
         <ion-item>
           <ion-label position="floating">Email Address</ion-label>
           <ion-input type="email" placeholder="Email" name="email" #email="ngModel" [(ngModel)]="login.email"
@@ -35,30 +35,35 @@
             <h4 style="padding-left: 20px; margin-top: 10px;">Please Provide Password</h4>
           </ion-text>
         </div>
+        
 
-        <p id="forgetPassword" (click)="goToForget()"> Forget Password</p>
+        <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input [type]="type ? 'password' : 'text'" placeholder="Password" name="cpassword" #cpassword="ngModel"
+          [(ngModel)]="login.cpassword" required></ion-input>
+          <ion-icon class="ion-align-self-center" name="eye-outline" slot="end"  (click)="changeType()"
+          [name]="type ? 'eye' : 'eye-off'"></ion-icon>
+        </ion-item>
+       
+        <div *ngIf="cpassword.invalid && cpassword.touched ">
+          <ion-text color="danger text-center">
+            <h4 style="padding-left: 20px; margin-top: 10px;">Please Provide Password</h4>
+          </ion-text>
+        </div>
+
+      
         <div class="btn">
           <ion-button (click)="goToHome()" [disabled]="loginForm.invalid">Login</ion-button>
         </div>
       </form>
-      <p id="media"> Or Login using Social Media</p>
-      <div class="socialMedia">
-        <ion-icon name="logo-facebook" (click)="facebookLogin()"></ion-icon>
-        <ion-icon name="logo-twitter" (click)="twitterLogin()"></ion-icon>
-        <ion-icon name="logo-google" (click)="gmailLogin()"></ion-icon>
-      </div>
-      <div class="touchLogin" (click)="touchLogin()">
-        <ion-icon name="finger-print-outline"></ion-icon>
-        <p>Sign In Using Touch ID</p>
-      </div>
-      <div class="faceLogin" (click)="faceLogin()">
-        <ion-icon name="eye-outline"></ion-icon>
-        <p> Sign In With Face ID</p>
-      </div>
+    
+     
+     
+      
     </div>
   </div>
   <div class="navigator">
-    <p (click)="goToRegister()">Don't have an Account ? Register Now</p>
+    <p (click)="goToLogin()">Already have an Account ? Login Now</p>
   </div>
 
 

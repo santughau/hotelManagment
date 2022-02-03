@@ -35,10 +35,12 @@ export class SwipperPage implements OnInit {
   }
 
   skip() {
+    localStorage.setItem("onboarding", "true");
     this.router.navigate(['/login'])
   }
 
   login() {
+    localStorage.setItem("onboarding", "true");
     this.router.navigate(['/login'])
   }
 }

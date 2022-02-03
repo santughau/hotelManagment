@@ -23,6 +23,8 @@ export class AppComponent {
     { title: 'My Favourite', url: '/my-favourite', icon: 'mail' },
     { title: 'Your Order', url: '/your-order', icon: 'mail' },
     { title: 'Chef Details', url: '/chef-details', icon: 'mail' },
+    { title: 'Preferences', url: '/preferences', icon: 'mail' },
+    { title: 'Phone Verification', url: '/verify-phone', icon: 'mail' },
     { title: 'FAQs & Help', url: '/faq', icon: 'mail' },
   ];
   public labels = [];
@@ -47,10 +49,10 @@ export class AppComponent {
    async pushToAppOnboarding() {
      if (localStorage.getItem('onboarding')) {
       console.log("true");
-      this.router.navigate(['/onboarding']);
+      //this.router.navigate(['/forget-password']);
      } else {
        console.log("false");
-       //this.router.navigate(['/search-chef']);
+       //this.router.navigate(['/swipper']);
     }
    }
 }

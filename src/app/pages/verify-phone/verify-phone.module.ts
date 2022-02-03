@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPageRoutingModule } from './login-routing.module';
+import { VerifyPhonePageRoutingModule } from './verify-phone-routing.module';
 
-import { LoginPage } from './login.page';
-
+import { VerifyPhonePage } from './verify-phone.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule
+    VerifyPhonePageRoutingModule
   ],
-  declarations: [LoginPage]
+  declarations: [VerifyPhonePage]
 })
-export class LoginPageModule {}
+export class VerifyPhonePageModule {}

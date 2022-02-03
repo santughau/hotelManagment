@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'setting',
+    redirectTo: 'otp-page',
     pathMatch: 'full'
   },
   {
@@ -86,6 +86,30 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'forget-password',
+    loadChildren: () => import('./pages/forget-password/forget-password.module').then( m => m.ForgetPasswordPageModule)
+  },
+  {
+    path: 'touch-id',
+    loadChildren: () => import('./pages/touch-id/touch-id.module').then( m => m.TouchIdPageModule)
+  },
+  {
+    path: 'face-id',
+    loadChildren: () => import('./pages/face-id/face-id.module').then( m => m.FaceIdPageModule)
+  },
+  {
+    path: 'verify-phone',
+    loadChildren: () => import('./pages/verify-phone/verify-phone.module').then( m => m.VerifyPhonePageModule)
+  },
+  {
+    path: 'otp-page',
+    loadChildren: () => import('./pages/otp-page/otp-page.module').then( m => m.OtpPagePageModule)
   }
 ];
 
